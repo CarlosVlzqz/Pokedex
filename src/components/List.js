@@ -1,6 +1,8 @@
 import React from 'react'
 import ListItem from './ListItem'
 
+import './scss/List.scss';
+
 function List(props) {
 
     const items = props.items

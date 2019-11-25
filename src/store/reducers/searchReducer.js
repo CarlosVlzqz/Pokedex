@@ -1,5 +1,5 @@
 const initialState =  {
-    search: ''
+    search: 'charizard'
 }
 
 const pokemonList = (state = initialState, action) => {
