@@ -1,9 +1,7 @@
-const initialState =  {
-    search: 'charizard'
-}
+const initialState =  { search: '' }
 
 const pokemonList = (state = initialState, action) => {
-    switch(action.type){
+    switch(action.type) {
         case 'SET_SEARCH':
             state.search = action.payload.id
             return state

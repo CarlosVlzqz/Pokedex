@@ -1,6 +1,37 @@
+$danger: #FF4500;
+
 body {
     margin: 0;
     background-color: #272727;
 }
 
+.empty-list {
+    color: white;
+    text-align: center;
+    margin: 3rem;
+}
+
+.button {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    border: 0;
+    outline:none;
+    border-radius:0;
+    padding:15px 0;
+    text-transform:capitalize;
+    transition:all.5s ease;
+    padding: 1rem;
+    &-red {
+        color:$danger;
+        border: solid 2px $danger ;
+        background-color: transparent;
+    }
+    &-delete {
+        position: absolute;
+        top: -20px;
+        right: -10px;
+        background-color: transparent;
+    }
+  }
 

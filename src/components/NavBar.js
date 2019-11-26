@@ -1,17 +1,16 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import './scss/NavBar.scss';
 
 function SearchBar(props) {
 
     const [inputValue, setInputValue] = useState('')
 
     return (
-        <div>
-            <nav className="">
-                <span>Pokédex</span>
-                <form className="" onSubmit={(e) => e.preventDefault()}>
-                    <input className="" type="search" placeholder="Name or Number" onChange={e => setInputValue(e.target.value)} />
-                    <button className="" onClick={() => props.submit(inputValue)}>Search</button>
-                </form>
+        <div className="searchbar">
+            <span>Search by name or Id:</span>
+            <nav>
+                <input className="" type="text" placeholder="Type here..." onChange={ (e) => setInputValue(e.target.value) } />
+                <button className="button button-red" onClick={ () => props.submit(inputValue) }>Search</button>
             </nav>
         </div>
     )

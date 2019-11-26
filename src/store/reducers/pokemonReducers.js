@@ -3,7 +3,7 @@ const initialState =  {
 }
 
 const pokemonList = (state = initialState, action) => {
-    switch(action.type){
+    switch(action.type) {
         case 'ADD_TO_LIST':
             return {
                 ...state,
@@ -16,6 +16,11 @@ const pokemonList = (state = initialState, action) => {
                     }
             ]
         };
+        case 'REMOVE_FROM_LIST':
+            return {
+                ...state,
+                list: state.list.filter( (item) => item.name !== action.payload.name )
+            }
         default:
             return state;
     }

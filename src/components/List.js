@@ -7,10 +7,14 @@ function List(props) {
 
     const items = props.items
     return (
-        <div>
+        <div className="row">
             {
                 items.map(function (item, index) {
-                    return <ListItem key={index} {...item}  ></ListItem>
+                    return (
+                        <div className="col-md-3" key={ index }>
+                            <ListItem { ...item }  ></ListItem>
+                        </div>
+                    )
                 })
             }
         </div>
